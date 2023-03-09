@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+
+}
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: 100s;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+   
+}
+.search input[type=text]{
+    
+    width: 49%;
+    height: 8vh;
+    border: 2px gray;
+    box-shadow: 0px 3px 15px gray;
+    border-radius: 7px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+}
+.foodheadheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foodheader a{
+    text-decoration: none;
+    margin-left: 6%;
+    color: white;
+    
+}
+.foodheader a:hover{
+    color: whitesmoke;
+}
+.header{
+    background-color: orange;
+    height: 8vh;
+    
+}
+ .btn{
+   margin-left: 2%;
+    width: 90px;
+    height: 30px;
+    background:transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 13px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.footheader span .btn2:hover{
+    background-color: white;
+    color: black;
+}
+.header{
+    padding-top: 2%;
+}
+.foodlists {
+    display: flex;
+   
+    margin-bottom: 4%;
+    
+}
+.foods img{
+    border-radius: 15px;
+    
+    padding-top: 5%;
+}
+.foods:hover{
+    box-shadow: 0px 5px 6px gray;
+    border-radius: 20px;
+    
+    
+    
+}
+.foods img:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.ordernow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order:hover{
+    transform: scale(1.1);
+    transition:0.3s;
+    color: whitesmoke;
+    color: white;
+}
+.order{
+    background-color:orange;
+    color: white;
+    border: 2px solid;
+    border-color: orange;
+}
+
+.foods h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.part {
+    float:left;
+    margin:0 5px;
+  }
+  .stars {
+   display:inline-block;
+    width:auto;
+    position:relative;
+    font-size:28px;
+    /* border:2px solid #FC0; */
+    border-radius:5px;
+    background-color:navy;
+   padding-bottom: 10px;
+    margin:5px;
+    height: 6vh;
+    margin-bottom: 3%;
+}
+.stars:BEFORE {
+    content:"★★★★★"; 
+    position:absolute;
+    overflow:hidden;
+    z-index:1;
+    left:0px;
+    top:0px;
+/* everything below here is optional. */
+    color:#FC0;
+   
+}
+.stars:AFTER {
+    content:"★★★★★";
+    position:relative;
+    color:#fff;
+}
+.stars.rate:AFTER {
+    position:absolute;
+    left:0px;
+}
+.stars.rate > A {
+    color:transparent;
+    text-decoration:none;
+    position:relative;
+    z-index:2;
+}
+.stars.rate:HOVER:BEFORE,
+	.stars.rate:HOVER:AFTER {
+		display:none;
+	}
+    .stars.rate:HOVER > A {
+		color:#FC0;
+		text-shadow:0px 1px 0 #000, 0 -1px 0 #fff;
+	}
+    .stars.rate:HOVER > A:HOVER {
+		color:#FC0;
+		text-shadow:0px 2px 0 #000, 0 -1px 0 #fff;
+		top:-1px;
+	}
+    .stars.rate >A:HOVER ~ A {
+		color:#fff;
+		text-shadow:none;
+	}
+    .stars:NOT([data-percent]):BEFORE,
+  .stars[data-percent="0"]:BEFORE {
+		display:none;
+	}
+/* 1/2 a star */
+	.stars[data-percent="10"]:BEFORE {
+		width:10%;
+	}
+/* 1 star */
+	.stars[data-percent="20"]:BEFORE {
+		width:20%;
+	}
+/* 1 & 1/2 stars */
+	.stars[data-percent="30"]:BEFORE {
+		width:30%;
+	}
+/* etc. */
+	.stars[data-percent="40"]:BEFORE {
+		width:40%;
+	}
+	.stars[data-percent="50"]:BEFORE {
+		width:50%;
+	}
+	.stars[data-percent="60"]:BEFORE {
+		width:60%;
+	}
+	.stars[data-percent="70"]:BEFORE {
+		width:70%;
+	}
+	.stars[data-percent="80"]:BEFORE {
+		width:80%;
+	}
+	.stars[data-percent="90"]:BEFORE {
+		width:90%;
+	}
+	.stars[data-percent="100"]:BEFORE {
+		width:100%;
+	}
+.lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lists a{
+     text-decoration: none;
+     color: gray;
+     margin-left: 20px;
+     width: auto;
+     border-radius: 6px;
+}
+.lists button{
+    
+    border-radius: 15px;
+    cursor: pointer;
+    border-color: azure;
+    width: 70px;
+    height: 5vh;
+    border-bottom: azure;
+   border-right: azure;
+}
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
